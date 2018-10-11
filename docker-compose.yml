@@ -1,0 +1,43 @@
+version: "2.3"
+services:
+ nginx:
+   build: ./nginx
+   container_name: nginx
+   hostname: nginx
+   links:
+   - consul
+   ports:
+   - "80:80"
+   - "443:443"
+   labels:
+     SERVICE_IGNORE: 'yes'
+     SERVICE_TAGS: InfraService
+   volumes:
+   - "./nginx:/home/nginx"
+
+ consul:
+   command: -server -bootstrap -data-dir=/data -advertise ${HOST_IP}
+   image: progrium/consul
+   container_name: consul
+   hostname: consul
+   labels:
+     SERVICE_IGNORE: 'yes'
+     SERVICE_TAGS: InfraService
+   ports:
+   - "8500:8500"
+
+ registrator:
+   command: "-internal consul://consul:8500"
+   image: gliderlabs/registrator:latest
+   container_name: registrator
+   hostname: registrator
+   labels:
+     SERVICE_TAGS: InfraService
+   links:
+   - consul
+   volumes:
+   - "/var/run/docker.sock:/tmp/docker.sock"
+
+
+   
+
