@@ -30,6 +30,8 @@ NGINX used in conjuction with Consul, a Service discovery platform and Consul-Te
 	Replace <certifiacte_key_path> with path where your certificate key file is present
 	
 	You can edit index.html file and add content your content.
+	
+	NOTE : As a reference, example.com.key and example.com.crt files can be found at project root.
 
 
 ## SetUp
