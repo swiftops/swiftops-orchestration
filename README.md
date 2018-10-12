@@ -7,8 +7,8 @@ The infrastructure consist of beloww components
 * [Consul](http://www.consul.io) for service discovery
 * [Registrator](https://github.com/gliderlabs/registrator) to register services with Consul. Registrator monitors for containers being started and stopped and updates Consul when a container changes state.
 * [NGINX](http://nginx.org/)
-* [Conversational UI] 
-* [Mongo DB]
+* [Slack] (https://slack.com/)
+* [Mongo DB] (https://www.mongodb.com/)
 * All all services like perfservice,changeservice,rootservice,etc
 
 
