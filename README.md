@@ -2,7 +2,7 @@
 
 ### Introduction
 
-The infrastructure consist of beloww components
+The infrastructure consist of below components
 
 * [Consul](http://www.consul.io) for service discovery
 * [Registrator](https://github.com/gliderlabs/registrator) to register services with Consul. Registrator monitors for containers being started and stopped and updates Consul when a container changes state.
@@ -158,7 +158,7 @@ Step 3 : Re-run below command
 ```
 docker-compose up -d --remove-orphans
 ```
-Step 4 : Check newly added service on http://<DOCKER-HOST-IP>:<PORT>/ui
+Step 4 : Check newly added service on ```http://<DOCKER-HOST-IP>:<PORT>/ui```
 
 Microservice will be available on the below url
 
@@ -171,7 +171,7 @@ Syntax
 `http://<NGINX-URL>/<SERVICE-NAME>/<API-URL>`
 
 ex : 
-http://example.com/conversationalui/searchbox
+http://example.com/perfservice/searchbox
 
 
 ## Add Key/Value in Consul and use it in code
