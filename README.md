@@ -115,7 +115,7 @@ ex: docker stop <container_name>
 $ docker stop microservice_perfservice_1
 microservice_perfservice_1
 ```
-On the Consul UI page (http://DOCKER-HOST-IP:<PORT>/ui/#/dc1/services/http),the container gets removed. Also the NGINX config file (/etc/nginx/conf.d/app.conf) gets reflected with the changes and server gets removed from there as well.
+On the Consul UI page `(http://DOCKER-HOST-IP:<PORT>/ui/#/dc1/services/http)`,the container gets removed. Also the NGINX config file (/etc/nginx/conf.d/app.conf) gets reflected with the changes and server gets removed from there as well.
 
 ## Add New Microservice 
 
