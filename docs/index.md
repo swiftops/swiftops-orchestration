@@ -33,10 +33,10 @@ ChatOps. It will help them to understand how to build ChatOps as centralised too
 * Integrate ELK dashboards with ChatOps.
 
 # ChatOps Architecture Component
-![ChatOps Architecture Component](../img/swiftopscomponent.png)
+![ChatOps Architecture Component](swiftopscomponent.png)
 
 # ChatOps Architecture Component Tools
-![ChatOps Architecture Component](../img/swiftopstools.png)
+![ChatOps Architecture Component](swiftopstools.png)
 
 For more information about architecture component refer [Annexure](#annexure)
 # Scope and Out Of Scope
