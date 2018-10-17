@@ -72,8 +72,8 @@ b. Trigger Jenkins job with build parameter. (maximum 5 parameter in Jenkins job
 4. Include Rasa Core to implement ML in ChatOps.
 5. Trigger Jenkins job using ChatOps.
 
-# Reference Link
-Getting Started with ChatOps refer [ChatOps Orchestration](https://github.com/swiftops/swiftops-orchestration)
+# Getting Started
+To getting started with ChatOps refer [ChatOps Orchestration](https://github.com/swiftops/swiftops-orchestration)
 
 # Annexure
 
