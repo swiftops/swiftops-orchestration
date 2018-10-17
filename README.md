@@ -1,4 +1,4 @@
-# SwiftOps Orchestration
+# Getting Started with SwiftOps
 
 ### Introduction
 
