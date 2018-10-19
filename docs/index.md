@@ -83,7 +83,7 @@ b. Trigger Jenkins job with build parameter. (maximum 5 parameter in Jenkins job
 
 <p align="left"><img padding-left="100px" height="300px" width="550px" alt="unfurl_code" src="../img/r5.jpg"></p>
 
-<p align="right"><img padding-right="100px" height="400px" width="550px" alt="unfurl_code" src="../img/r6.jpg"></p>
+<p align="right"><img padding-right="100px" height="330px" width="550px" alt="unfurl_code" src="../img/r6.jpg"></p>
 
 To getting started with ChatOps refer [ChatOps Orchestration](https://github.com/swiftops/swiftops-orchestration)
 
