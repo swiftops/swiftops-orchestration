@@ -73,6 +73,18 @@ b. Trigger Jenkins job with build parameter. (maximum 5 parameter in Jenkins job
 5. Trigger Jenkins job using ChatOps.
 
 # Getting Started
+<p><img padding-left="100px" height="150px" width="550px" alt="unfurl_code" src="../img/r1.jpg"></p>
+
+<p align="right"><img padding-right="100px" height="300px" width="550px" alt="unfurl_code" src="../img/r2.jpg"></p>
+
+<p align="left"><img padding-left="100px" height="150px" width="550px" alt="unfurl_code" src="../img/r3.jpg"></p>
+
+<p align="right"><img padding-right="100px" height="150px" width="550px" alt="unfurl_code" src="../img/r4.jpg"></p>
+
+<p align="left"><img padding-left="100px" height="300px" width="550px" alt="unfurl_code" src="../img/r5.jpg"></p>
+
+<p align="right"><img padding-right="100px" height="400px" width="550px" alt="unfurl_code" src="../img/r6.jpg"></p>
+
 To getting started with ChatOps refer [ChatOps Orchestration](https://github.com/swiftops/swiftops-orchestration)
 
 # Annexure
