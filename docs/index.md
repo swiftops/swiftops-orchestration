@@ -75,17 +75,17 @@ b. Trigger Jenkins job with build parameter. (maximum 5 parameter in Jenkins job
 # Getting Started
 
 * ### Goal
-    <p><img padding-left="100px" height="150px" width="550px" alt="unfurl_code" src="../img/r1.jpg"></p>
+    <p><img padding-left="100px" height="150px" width="550px" alt="unfurl_code" src="./request1.jpg"></p>
+
+    <p align="right"><img padding-right="100px" height="300px" width="550px" alt="unfurl_code" src="./reply1.jpg"></p>
     
-    <p align="right"><img padding-right="100px" height="300px" width="550px" alt="unfurl_code" src="../img/r2.jpg"></p>
+    <p align="left"><img padding-left="100px" height="150px" width="550px" alt="unfurl_code" src="./request2.jpg"></p>
     
-    <p align="left"><img padding-left="100px" height="150px" width="550px" alt="unfurl_code" src="../img/r3.jpg"></p>
+    <p align="right"><img padding-right="100px" height="150px" width="550px" alt="unfurl_code" src="./reply2.jpg"></p>
     
-    <p align="right"><img padding-right="100px" height="150px" width="550px" alt="unfurl_code" src="../img/r4.jpg"></p>
+    <p align="left"><img padding-left="100px" height="300px" width="550px" alt="unfurl_code" src="./request3.jpg"></p>
     
-    <p align="left"><img padding-left="100px" height="300px" width="550px" alt="unfurl_code" src="../img/r5.jpg"></p>
-    
-    <p align="right"><img padding-right="100px" height="400px" width="550px" alt="unfurl_code" src="../img/r6.jpg"></p>
+    <p align="right"><img padding-right="100px" height="330px" width="550px" alt="unfurl_code" src="./reply3.jpg"></p>
 
 * ### Try it now
     ### [Get started with ChatOps](https://github.com/swiftops/swiftops-orchestration)
