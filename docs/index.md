@@ -73,17 +73,17 @@ b. Trigger Jenkins job with build parameter. (maximum 5 parameter in Jenkins job
 5. Trigger Jenkins job using ChatOps.
 
 # Getting Started
-<p><img padding-left="100px" height="150px" width="550px" alt="unfurl_code" src="request1.jpg"></p>
+<p><img padding-left="100px" height="150px" width="550px" alt="unfurl_code" src="./request1.jpg"></p>
 
-<p align="right"><img padding-right="100px" height="300px" width="550px" alt="unfurl_code" src="reply1.jpg"></p>
+<p align="right"><img padding-right="100px" height="300px" width="550px" alt="unfurl_code" src="./reply1.jpg"></p>
 
-<p align="left"><img padding-left="100px" height="150px" width="550px" alt="unfurl_code" src="request2.jpg"></p>
+<p align="left"><img padding-left="100px" height="150px" width="550px" alt="unfurl_code" src="./request2.jpg"></p>
 
-<p align="right"><img padding-right="100px" height="150px" width="550px" alt="unfurl_code" src="reply2.jpg"></p>
+<p align="right"><img padding-right="100px" height="150px" width="550px" alt="unfurl_code" src="./reply2.jpg"></p>
 
-<p align="left"><img padding-left="100px" height="300px" width="550px" alt="unfurl_code" src="request3.jpg"></p>
+<p align="left"><img padding-left="100px" height="300px" width="550px" alt="unfurl_code" src="./request3.jpg"></p>
 
-<p align="right"><img padding-right="100px" height="330px" width="550px" alt="unfurl_code" src="reply3.jpg"></p>
+<p align="right"><img padding-right="100px" height="330px" width="550px" alt="unfurl_code" src="./reply3.jpg"></p>
 
 To getting started with ChatOps refer [ChatOps Orchestration](https://github.com/swiftops/swiftops-orchestration)
 
