@@ -1,23 +1,21 @@
 # Getting Started with SwiftOps
 
-### Introduction
+## Introduction
 
 The infrastructure consist of below components
 
-* [Consul](http://www.consul.io) for service discovery
-* [Registrator](https://github.com/gliderlabs/registrator) to register services with Consul. Registrator monitors for containers being started and stopped and updates Consul when a container changes state.
-* [NGINX](http://nginx.org/)
-* [Slack] (https://slack.com/)
-* [Mongo DB] (https://www.mongodb.com/)
-* All all services like perfservice,changeservice,rootservice,etc
-
+*  [Consul](http://www.consul.io) for service discovery
+*  [Registrator](https://github.com/gliderlabs/registrator) to register services with Consul. Registrator monitors for containers being started and stopped and updates Consul when a container changes state.
+*  [NGINX](http://nginx.org/)
+*  [Slack] (https://slack.com/)
+*  [Mongo DB] (https://www.mongodb.com/)
+*  All all services like perfservice,changeservice,rootservice,etc
 
 NGINX used in conjuction with Consul, a Service discovery platform and Consul-Template, a generic template rendering tool that provides a convenient way to populate values from Consul into the file system using a daemon.
 
-
 ## Pre-Requisites
 
-* [Docker for Mac](https://www.docker.com/products/docker#/mac) if running this locally on your MAC **OR** 
+*  [Docker for Mac](https://www.docker.com/products/docker#/mac) if running this locally on your MAC **OR** 
 [docker-compose](https://docs.docker.com/compose/install) if running this on a linux VM
 
 ![NGINX-Consul](image.png)
@@ -33,39 +31,39 @@ NGINX used in conjuction with Consul, a Service discovery platform and Consul-Te
 	
 	NOTE : As a reference, example.com.key and example.com.crt files can be found at project root.
 
-
 ## SetUp
 
-* NGINX will be listening on port 80 on the docker host.
-     1. If Docker Toolbox is used then the IP address of the docker-machine (default here) can be fetched with below command
+*  NGINX will be listening on port 80 on the docker host.
 
-     ```
-     $ docker-machine ip default
-     <IP>
-     ```
-     1. If Docker for Mac is used then the IP address to be used is 172.17.0.1
+  1.  If Docker Toolbox is used then the IP address of the docker-machine (default here) can be fetched with below command
+  ```shell
+  $ docker-machine ip default
+  <IP>
+  ```
 
-     Export this IP into an environment variable HOST_IP by running `export HOST_IP=<IP>` (used by docker-compose.yml below)
-	 else `export HOST_IP=$(docker-machine ip default)`
+  2.  If Docker for Mac is used then the IP address to be used is 172.17.0.1
+  Export this IP into an environment variable HOST_IP by running `export HOST_IP=<IP>` (used by docker-compose.yml below)
+  else `export HOST_IP=$(docker-machine ip default)`
 
-* Now to spin up all the containers run: 
+*  Now to spin up all the containers run: 
 
-```
+```shell
 $ docker-compose up -d
 ```
 There should be bunch of containers up and running:
 
 OR USE
  
-* To remove orphan containers before spinning up new continers run :
-```
+*  To remove orphan containers before spinning up new continers run :
+```shell
 docker-compose up -d --remove-orphans
 ```
-* Edit start_containers.sh file and replace all required parameters in the placeholders provided and then run the sh file.
+
+*  Edit start_containers.sh file and replace all required parameters in the placeholders provided and then run the sh file.
 	*** It will remove all the containers already not running and would add key value pairs in Consul.
 	It would restart all the containers that would be using the parameters inserted as key value pairs.
 
-```
+```shell
 $ docker ps           
 CONTAINER ID        IMAGE                           COMMAND                  CREATED             STATUS              PORTS                                                                            NAMES
 5f8a21f24094        swiftops/rootservice            "python root.py"         2 days ago          Up 2 days           0.0.0.0:32809->8082/tcp                                                          microservice_rootservice_1
@@ -89,7 +87,7 @@ So now just go to `http://<DOCKER-HOST-IP>:<PORT>/ui` (Note: Docker for Mac runs
 
 To scale the services up:
 
-```
+```shell
 $ docker-compose scale <SERVICE-NAME>=3
 ex : $ docker-compose scale perfservice=3
 Creating and starting microservice_perfservice_2 ... done
@@ -98,7 +96,7 @@ Creating and starting microservice_perfservice_3 ... done
 
 Scale it down:
 
-```
+```shell
 $ docker-compose scale <SERVICE-NAME>=1
 Stopping and removing microservice_perfservice_2 ... done
 Stopping and removing microservice_perfservice_3 ... done
@@ -110,7 +108,7 @@ Another feature we are using here is the HTTP health checks with Consul. Registr
 With the following two labels (SERVICE_80_CHECK_HTTP: / and SERVICE_80_CHECK_INTERVAL: 10s) applied to our http service in the docker-compose.yml file, Consul sends a / request to all http containers every 5 seconds and expect a 200 OK response in return for a container to be considered healthy. If a 200 OK is not received, the container will be removed from Consul and in turn removed from upstream block within NGINX configuration as well.
 
 ## Stopped container gets removed from load balancing pool
-```
+```shell
 ex: docker stop <container_name>
 $ docker stop microservice_perfservice_1
 microservice_perfservice_1
@@ -121,7 +119,7 @@ On the Consul UI page `(http://DOCKER-HOST-IP:<PORT>/ui/#/dc1/services/http)`,th
 
 Step 1 : Add new microservice definition in docker-compose.yml
 
-```
+```yaml
 Syntax
 <SERVICE-NAME>:
   image: <DOCKER-IMAGE-NAME>
@@ -148,21 +146,21 @@ masterservice:
 ```
 
 Step 2: Export docker ip like
-```
+```yaml
 export HOST_IP=<IP>
 ex . export HOST_IP=192.168.99.100
 ```
 
 Step 3 : Re-run below command
 
-```
+```shell
 docker-compose up -d --remove-orphans
 ```
 Step 4 : Check newly added service on ```http://<DOCKER-HOST-IP>:<PORT>/ui```
 
 Microservice will be available on the below url
 
-```
+```yaml
 http://<DOCKER-HOST-IP>/<SERVICE-NAME>/
 ```
 
@@ -170,18 +168,17 @@ http://<DOCKER-HOST-IP>/<SERVICE-NAME>/
 Syntax
 `http://<NGINX-URL>/<SERVICE-NAME>/<API-URL>`
 
-ex : 
-http://example.com/perfservice/searchbox
-
+[Example](http://example.com/perfservice/searchbox)
 
 ## Add Key/Value in Consul and use it in code
-1. Access consul console url i.e.  `http://<NGINX-URL>:<PORT>/ui`
-2. Include consul_util.py in the project`
-3. Add below code where to fetch the value from Consul
+1.  Access consul console url i.e.  `http://<NGINX-URL>:<PORT>/ui`
+2.  Include consul_util.py in the project`
+3.  Add below code where to fetch the value from Consul
 
-```from consul_util import _get_config_value
-value = _get_config_value('#KEY#')```
-
+```python
+from consul_util import _get_config_value
+value = _get_config_value('#KEY#')
+```
 
 example : value =  _get_config_value('DB_IP')
 
